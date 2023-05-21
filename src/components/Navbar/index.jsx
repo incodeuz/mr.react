@@ -1,6 +1,6 @@
 import ReactLogo from "../../assets/react.svg";
 import LupaIcon from "../../assets/lupa.svg";
-import UserIcon from "../../assets/user.png";
+import UserIcon from "../../assets/icons/user.svg";
 
 const Navbar = () => {
   return (
@@ -18,11 +18,7 @@ const Navbar = () => {
           </div>
 
           <div className="actions">
-            <img
-              width="40px"
-              src={UserIcon}
-              style={{ borderRadius: "100px" }}
-            />
+            <img width="100%" src={UserIcon} />
           </div>
         </div>
       </div>

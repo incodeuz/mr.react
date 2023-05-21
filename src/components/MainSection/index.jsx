@@ -1,7 +1,7 @@
 import React from "react";
 
 const MainSection = () => {
-  return <div className="main-wrapper">MainSection</div>;
+  return <div>MainSection</div>;
 };
 
 export default MainSection;

@@ -3,7 +3,7 @@
 :root {
   --first-color: #23272f;
   --secondary-color: #191b20;
-  --primary-color: #0a7ea3;
+  --primary-color: #085d79;
 }
 
 * {
@@ -11,6 +11,11 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -121,6 +126,8 @@ nav {
 }
 
 .side-title {
+  text-decoration: none;
+  transition: all 0.3s linear;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -132,12 +139,12 @@ nav {
   cursor: pointer;
   padding: 8px 10px;
   margin: 5px 0;
+  border-radius: 12px;
 }
 
 .side-title:hover {
   /* background: rgba(153, 161, 179, 0.2); */
   background-color: var(--primary-color);
-  border-radius: 12px;
 }
 
 /* SIDEBAR END */
@@ -153,4 +160,21 @@ nav {
   border-radius: 12px;
   margin-left: 12px;
   margin-left: 292px;
+}
+
+.actions {
+  background-color: #191b20;
+  padding: 4px 6px;
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  transition: all 0.3s linear;
 }

@@ -1,26 +1,39 @@
+import HomeIcon from "../assets/icons/home.svg";
+import PlayIcon from "../assets/icons/videoplay.svg";
+import DashboardIcon from "../assets/icons/category.svg";
+import NewsIcon from "../assets/icons/globus.svg";
+import PostIcon from "../assets/icons/post.svg";
+import SettingsIcon from "../assets/icons/setting.svg";
+
 export const sidebarData = [
   {
-    icon: "",
+    Icon: HomeIcon,
     title: "Home",
+    to: "/",
   },
   {
-    icon: "",
+    Icon: PostIcon,
+    to: "/new-posts",
     title: "New Posts",
   },
   {
-    icon: "",
+    Icon: PlayIcon,
+    to: "/new-movies",
     title: "New Movies",
   },
   {
-    icon: "",
+    to: "/news",
+    Icon: NewsIcon,
     title: "News",
   },
   {
-    icon: "",
+    Icon: SettingsIcon,
+    to: "/settings",
     title: "Settings",
   },
   {
-    icon: "",
+    Icon: DashboardIcon,
+    to: "/dashboard",
     title: "Dashboard",
   },
 ];
