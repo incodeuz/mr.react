@@ -112,7 +112,7 @@ nav {
 /* SIDEBAR START */
 
 .sidebar {
-  width: 280px;
+  width: 250px;
   border-radius: 12px;
   padding: 12px;
   position: fixed;
@@ -158,8 +158,8 @@ nav {
   flex-grow: 1;
   flex: 1;
   border-radius: 12px;
-  margin-left: 12px;
-  margin-left: 292px;
+  /* margin-left: 12px; */
+  margin-left: 262px;
 }
 
 .actions {
@@ -177,4 +177,14 @@ nav {
   background-color: var(--secondary-color);
   border-radius: 12px;
   transition: all 0.3s linear;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.ant-card-cover {
+  height: 200px !important;
 }
