@@ -2,12 +2,16 @@ import ReactLogo from "../../assets/react.svg";
 import LupaIcon from "../../assets/lupa.svg";
 import UserIcon from "../../assets/icons/user.svg";
 
-const Navbar = () => {
+const Navbar = ({ mini, setMini }) => {
   return (
     <div className="container">
       <div className="navbar-wrapper">
         <div className="logo-box">
-          <img src={ReactLogo} alt="react logo" />
+          <img
+            src={ReactLogo}
+            alt="react logo"
+            onClick={() => setMini(!mini)}
+          />
           <p className="nav-title">Mr.React</p>
         </div>
 

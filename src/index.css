@@ -11,6 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+  transition: all 0.2s linear;
 }
 
 p {
@@ -159,7 +160,6 @@ nav {
   flex: 1;
   border-radius: 12px;
   /* margin-left: 12px; */
-  margin-left: 262px;
 }
 
 .actions {

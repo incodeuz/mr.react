@@ -9,9 +9,10 @@ import News from "../components/News";
 import Settings from "../components/Settings";
 import Dashboard from "../components/Dashboard";
 import Login from "../components/Login";
+import Lesson from "../components/Lesson";
 
 const MainLayout = () => {
-  const movies = [
+  const [movies, setMovies] = React.useState([
     {
       title: "Forsaj 10",
       desc: "Eng yangi filmlardan",
@@ -80,28 +81,41 @@ const MainLayout = () => {
       duration: "2:01m",
       price: "Free",
     },
-  ];
+  ]);
+  const [miniSidebar, setMiniSidebar] = React.useState(true);
+
+  console.log(miniSidebar);
+
   return (
     <>
       <header>
         <nav>
-          <Navbar />
+          <Navbar mini={miniSidebar} setMini={setMiniSidebar} />
         </nav>
       </header>
 
       <main className="main">
         <div className="container">
           <section className="main-section">
-            <Sidebar />
+            <Sidebar mini={miniSidebar} setMini={setMiniSidebar} />
             <div className="main-wrapper text-light">
               <Routes>
-                <Route path="/" element={<MainSection kinolar={movies} />} />
+                <Route
+                  path="/"
+                  element={
+                    <MainSection
+                      mini={miniSidebar}
+                      setMini={setMiniSidebar}
+                      kinolar={movies}
+                    />
+                  }
+                />
                 <Route path="/new-posts" element={<NewPosts />} />
                 <Route path="/new-movies" element={<NewMovies />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/lesson" element={<Lesson />} />
               </Routes>
             </div>
           </section>

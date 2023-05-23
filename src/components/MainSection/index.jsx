@@ -7,11 +7,15 @@ import {
 import { Card } from "antd";
 const { Meta } = Card;
 
-const MainSection = ({ kinolar }) => {
+const MainSection = ({ kinolar, mini, setMini }) => {
   return (
-    <div className="home-wrapper">
-      {kinolar.map((kino) => (
+    <div
+      className="home-wrapper"
+      style={{ marginLeft: `${!mini ? "80px" : "262px"}` }}
+    >
+      {kinolar.map((kino, index) => (
         <Card
+          key={index}
           style={{
             width: 300,
           }}
