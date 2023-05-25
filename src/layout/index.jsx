@@ -11,7 +11,7 @@ import Dashboard from "../components/Dashboard";
 import Login from "../components/Login";
 import Lesson from "../components/Lesson";
 
-const MainLayout = () => {
+const MainLayout = ({ children }) => {
   const [movies, setMovies] = React.useState([
     {
       title: "Forsaj 10",
@@ -84,8 +84,6 @@ const MainLayout = () => {
   ]);
   const [miniSidebar, setMiniSidebar] = React.useState(true);
 
-  console.log(miniSidebar);
-
   return (
     <>
       <header>
@@ -98,26 +96,7 @@ const MainLayout = () => {
         <div className="container">
           <section className="main-section">
             <Sidebar mini={miniSidebar} setMini={setMiniSidebar} />
-            <div className="main-wrapper text-light">
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <MainSection
-                      mini={miniSidebar}
-                      setMini={setMiniSidebar}
-                      kinolar={movies}
-                    />
-                  }
-                />
-                <Route path="/new-posts" element={<NewPosts />} />
-                <Route path="/new-movies" element={<NewMovies />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/settings" element={<Settings />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/lesson" element={<Lesson />} />
-              </Routes>
-            </div>
+            <div className="main-wrapper text-light">{children}</div>
           </section>
         </div>
       </main>

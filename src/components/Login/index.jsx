@@ -12,11 +12,15 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
         const user = res.user;
-        localStorage.setItem("user", JSON.stringify(user));
-        navigate("/");
+        localStorage.setItem("token", JSON.stringify(user.accessToken));
+        return navigate("/");
       })
       .catch((err) => console.log(err));
   };
+
+  if (localStorage.getItem("token")) {
+    return navigate("/");
+  }
   return (
     <div
       className="container d-flex align-items-center justify-content-center h-full"
