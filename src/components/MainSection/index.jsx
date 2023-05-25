@@ -1,9 +1,4 @@
 import React from "react";
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 import { Card } from "antd";
 const { Meta } = Card;
 

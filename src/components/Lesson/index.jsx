@@ -1,25 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 
-const Lesson = () => {
-  const [count, setCount] = React.useState(0);
-
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
+const Lesson = ({ mini }) => {
   return (
-    <div className="d-flex align-items-center ">
-      <button className="btn btn-primary" onClick={() => increment()}>
-        +
-      </button>
-      <h1 className="m-0 p-0">{count}</h1>
-      <button className="btn btn-primary" onClick={() => decrement()}>
-        -
-      </button>
+    <div
+      className="home-wrapper d-flex flex-column align-items-center gap-3"
+      style={{ marginLeft: `${!mini ? "80px" : "262px"}` }}
+    >
+      <h2>Hello bro</h2>
     </div>
   );
 };
