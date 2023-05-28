@@ -10,6 +10,7 @@ import Settings from "./components/Settings";
 import Dashboard from "./components/Dashboard";
 import Lesson from "./components/Lesson";
 import MainSection from "./components/MainSection";
+import Todo from "./components/Todo";
 
 function App() {
   const token = JSON.parse(localStorage.getItem("token"));
@@ -124,6 +125,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/dashboard" element={<Dashboard mini={miniSidebar} />} />
           <Route path="/lesson" element={<Lesson mini={miniSidebar} />} />
+          <Route path="/todo" element={<Todo mini={miniSidebar} />} />
         </Route>
       </Routes>
     </>

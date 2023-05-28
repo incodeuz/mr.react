@@ -36,4 +36,9 @@ export const sidebarData = [
     to: "/dashboard",
     title: "Dashboard",
   },
+  {
+    Icon: DashboardIcon,
+    to: "/todo",
+    title: "Todo",
+  },
 ];
